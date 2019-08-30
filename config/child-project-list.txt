@@ -1,0 +1,2 @@
+jsy-meeting,git@10.128.46.40:ranxu2/gmoa-meeting.git
+jsy-mytask,git@10.128.46.40:ranxu2/gmoa-mytask.git
