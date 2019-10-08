@@ -2,6 +2,7 @@
 #这条命令完成的功能是:
 #1.读取一个配置文件,然后动态生成各子项目目录
 #2.每个子项目目录在初次创建的时候,自动关联上git仓库
+#3.child-project-list.txt这个文件中,如果有记录,每一行格式应该是[子项目名称,所在git仓库地址]   例如:jsy-meeting,git@10.128.46.40:ranxu2/gmoa-meeting.git
 basepath=$(cd `dirname $0`; pwd)  #当前执行脚本的存放路径
 childProjectListTxt="$basepath/../config/child-project-list.txt"
 
