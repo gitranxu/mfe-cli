@@ -33,13 +33,14 @@ do
     #判断一下子目录是否存在,如果存在则说明之前初始化过了,不用管
     childName=$(echo $childProject | awk -F ',' '{print $1}')
     childGit=$(echo $childProject | awk -F ',' '{print $2}')
-    #echo "childGit: $childGit"
+    echo "childGit: $childGit"
     if [ ! -d $childName ];then
         if [ -n $childName ];then
             mkdir $childName
             cd ./$childName
             git init
             git remote add origin $childGit
+            git pull origin master
             git fetch
             cd .. #记得操作完后,还要回到操作前的工作目录
         else
